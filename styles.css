@@ -1,0 +1,151 @@
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --text: #132033;
+  --muted: #4a5b72;
+  --primary: #0f2e54;
+  --accent: #0f8f6f;
+  --border: #dbe3ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary);
+}
+
+header {
+  background: linear-gradient(140deg, var(--primary), #133f72);
+  color: #fff;
+}
+
+.container {
+  width: min(100%, 72rem);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.topbar {
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+nav a {
+  color: #d7e6ff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.hero {
+  padding: 1.8rem 0 2.2rem;
+}
+
+h1,
+h2 {
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 4.8vw, 2.6rem);
+}
+
+main {
+  padding: 1.5rem 0 2.2rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.install-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.install-button {
+  appearance: none;
+  border: 1px solid #8dc8b7;
+  background: var(--accent);
+  color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.install-button[hidden],
+.install-count[hidden] {
+  display: none;
+}
+
+.install-count {
+  margin: 0;
+  color: #d7e6ff;
+  font-size: 0.95rem;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 1.5rem 0 2rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 2.8rem 0 3.4rem;
+  }
+
+  .grid.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .install-button {
+    display: none !important;
+  }
+}
