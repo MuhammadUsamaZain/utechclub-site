@@ -4,18 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Leadership Programme | Utech Club</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <header>
       <div class="container">
         <div class="topbar">
-          <a class="brand" href="/">Utech Club</a>
+          <a class="brand" href="../">Utech Club</a>
           <nav aria-label="Main">
-            <a href="/about">About</a>
-            <a href="/leaders">Leaders</a>
-            <a href="/innovation">Innovation</a>
+            <a href="../about/">About</a>
+            <a href="../leaders/">Leaders</a>
+            <a href="../innovation/">Innovation</a>
+            <a href="../shaping-tomorrows-muslim-leaders-with-ai-and-faith/">Article 1</a>
+            <a href="../blending-ai-and-islamic-wisdom-for-tomorrows-leaders/">Article 2</a>
           </nav>
+          <div class="install-actions">
+            <button id="install-app-button" class="install-button" type="button" hidden>
+              Install app
+            </button>
+            <p id="install-count" class="install-count" aria-live="polite" hidden></p>
+          </div>
         </div>
         <section class="hero">
           <h1>The Leadership Development Programme</h1>
@@ -54,5 +63,8 @@
     <footer>
       <div class="container">© Utech Club</div>
     </footer>
+
+    <script src="../config.js" defer></script>
+    <script src="../app.js" data-utech-app defer></script>
   </body>
 </html>
